@@ -51,8 +51,7 @@ pub fn main() {
             ("blue", 0),
         ]);
 
-        let game_groups_vec: Vec<&str> = line.split(": ").collect();
-        let groups = game_groups_vec[1];
+        let groups = line.split(": ").collect::<Vec<&str>>()[1];
         for group in groups.split("; ").collect::<Vec<&str>>() {
             for group_color in group.split(", ").collect::<Vec<&str>>() {
                 let count_color_str: Vec<&str> = group_color.split(" ").collect();
